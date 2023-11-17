@@ -7,8 +7,12 @@
 *.txt
 *.tar.gz
 *.enc
+*.jpg
 
 *.aux
 *.log
 *.gz
 *.toc
+
+lab4/
+docs/

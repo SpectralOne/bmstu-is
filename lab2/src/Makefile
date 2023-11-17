@@ -15,4 +15,4 @@ $(MAIN_APP) : $(patsubst %.c,%.o, $(wildcard *.c))
 include $(wildcard *.d)
 
 clean :
-	rm -f *.d *.o *.out
+	rm -f *.d *.o *.out *.enc decrypted_*
