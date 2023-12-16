@@ -5,7 +5,6 @@
 #include "rsa.h"
 
 const char *argp_program_version = "MD5 RSA v1";
-const char *argp_program_bug_address = "artyombogachenco@gmail.com";
 static char doc[] = "MD5 with RSA";
 static char args_doc[] = "TARGET --hash --decrypt --encrypt";
 static struct argp_option options[] = {
