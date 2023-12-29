@@ -43,7 +43,7 @@ static struct argp argp = {options, parse_opt, args_doc, doc, 0, 0, 0};
 
 void print_hash(uint8_t p[RESULT_SIZE]) {
   for (int i = 0; i < RESULT_SIZE; ++i) {
-    printf("%x", p[i]);
+    printf("%02x", p[i]);
   }
   printf("\n");
 }
@@ -85,7 +85,7 @@ int main(const int argc, char *argv[]) {
 
     for (int i = 0; i < RESULT_SIZE; ++i) {
       long long int encrypted = rsa_encrypt((long long int)hash[i], priv);
-      printf("%lld ", encrypted);
+      printf("%02lld ", encrypted);
     }
     printf("\n");
   } else {
@@ -98,7 +98,7 @@ int main(const int argc, char *argv[]) {
       long long int encrypted;
       scanf("%lld", &encrypted);
       uint8_t decrypted = rsa_decrypt(encrypted, pub);
-      printf("%x", decrypted);
+      printf("%02x", decrypted);
     }
   }
 
